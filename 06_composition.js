@@ -26,8 +26,8 @@ console.log(concat(array1, array2));
 
 array1 = [1, 2, 3];
 
-const push = (arr, item) => [...arr,4]
-console.log(push(array1));
+const push = (arr, item) => [...arr, item]
+console.log(push(array1,4));
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres

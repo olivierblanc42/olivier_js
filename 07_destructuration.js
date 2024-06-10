@@ -23,7 +23,7 @@ console.log(extractFirstTwo(array2));
  */
 const array = [1, 2, 3];
 
-const extractRest = ([, b, c]) => [b, c] ;
+const extractRest = ([, ...array]) => array;
 console.log(extractRest(array));
 
 /**
@@ -55,7 +55,7 @@ console.log(extractName(objet));
 
 const objet2 = { name: "toto", password: "1234" };
 
-const removePassword = ({ name, password }) => name;
+const removePassword = ({ password, ...objet }) => objet ;
 console.log(removePassword(objet2));
 
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
