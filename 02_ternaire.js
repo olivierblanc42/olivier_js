@@ -6,7 +6,7 @@
  *    - utiliser l'opérateur ternaire (if interdit)
  */
 function ternaire(a, b) {
-    return a > b ? 'a est plus grand que b' : " b est plus grand que a";
+    return a > b ? '>' : '<';
 };
 
 console.log(ternaire(1, 2));
