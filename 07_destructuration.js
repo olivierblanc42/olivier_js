@@ -23,7 +23,7 @@ console.log(extractFirstTwo(array2));
  */
 const array = [1, 2, 3];
 
-const extractRest = ([, ...array]) => array;
+const extractRest = ([, ...rest]) => rest;
 console.log(extractRest(array));
 
 /**

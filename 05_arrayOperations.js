@@ -12,7 +12,7 @@
 
 const array = [1, 2, 3];
 
-const multiplyByTwo = (array) => array.map((i) => i * 2)
+const multiplyByTwo = (array) => array.map(i => i * 2)
 console.log(multiplyByTwo(array));
 
 /**
@@ -28,7 +28,9 @@ console.log(multiplyByTwo(array));
 const arrayString = ["Avion", "Allemand", "hélicoptère", "net"];
 
 
-const filterNameStartByA = (array) => array.filter((word) => word[0] === "A")
+const filterNameStartByA = (array) => array.filter(word => word[0] === "A")
+//const filterNameStartByA = (array) => array.filter(word => word.startsWith("A") )
+
 console.log(filterNameStartByA(arrayString));
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -42,7 +44,7 @@ console.log(filterNameStartByA(arrayString));
 
 const arraySum = [1, 2, 3];
 
-const sum = (array) => array.reduce((accumulator, currentValue) =>
+const sum = array => array.reduce((accumulator, currentValue) =>
   accumulator + currentValue
   , 0);
 console.log(sum(arraySum));
@@ -72,7 +74,7 @@ const arrayFind = [
   { id: 3, name: 'Foo' },
   { id: 4, name: 'Bar' },
 ]
-const findUserById = (array, id) => array.find((element) => element.id === id).name;
+const findUserById = (array, id) => array.find(element => element.id === id).name;
 console.log(findUserById(arrayFind, 3));
 
 
