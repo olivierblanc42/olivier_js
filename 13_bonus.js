@@ -24,8 +24,19 @@ ex: la pomme est rouge et la banane est jaune
 
  */
 
-const countWords = (sentence) => {
-};
+const objet = {
+  "la": 2,
+  "pomme": 1,
+  "est": 2,
+  "rouge": 1,
+  "et": 1,
+  "banane": 1,
+  "jaune": 1
+} ;
+
+
+const countWords = (sentence) => sentence.reduce((string, currentValue, accumulator)
+);
 console.log(countWords("la pomme est rouge et la banane est jaune"));
 
 /**
