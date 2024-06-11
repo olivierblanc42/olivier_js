@@ -30,9 +30,16 @@ usingThen(()=>{
  *   - ne pas utiliser .then
  */
 
-const usingAwait = (cb) => {
+const usingAwait = async (cb) => {
+    await sleep();
+    return cb();
+};
+   
 
-}
+
+usingAwait(() => {
+    console.log("ok");
+});;
 
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
@@ -47,11 +54,15 @@ const usingAwait = (cb) => {
  */
 
 //décommentez la ligne suivante une fois le package installé
-//const axios = require("axios");
-
+const axios = require("axios");
+const url = "https://jsonplaceholder.typicode.com/todos/1"
+ 
 const apiResponse = async (url) => {
 
+  let res =   await axios.get(url);
+   console.log(res.data);
+  return res.data;
 }
-
+apiResponse(url);
 
 module.exports = {usingThen, usingAwait, apiResponse};
